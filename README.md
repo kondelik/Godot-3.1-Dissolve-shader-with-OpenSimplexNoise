@@ -3,7 +3,7 @@
 
 Simple tutorial-like Dissolve Shader and Material for GODOT 3.1 alpha 2
 
-The Hearth of project is simple [Dissolve Shader](Godot-3.1-Dissolve-shader-with-OpenSimplexNoise/Materials/Dissolve.shader) with 4 uniforms:
+The Hearth of project is simple [Dissolve Shader](Materials/Dissolve.shader) with 4 uniforms:
 
 ```shader
 shader_type canvas_item;
@@ -42,3 +42,26 @@ void fragment()
 	}
 }
 ```
+
+Noise texture can be generated with script:
+
+```
+var noise = OpenSimplexNoise.new();
+noise.seed = randi();
+# noise.octaves = 3;
+# noise.period = 64;
+# noise.persistence = 0.5;
+# noise.lacunarity = 2;
+
+var noise_tex = NoiseTexture.new();
+
+noise_tex.width = 512; # width of sprite
+noise_tex.height = 256; #height of sprite
+noise_tex.noise = noise;
+
+_material.set_shader_param("noise_tex", noise_tex);
+```
+
+or in GUI:
+
+![shader_params](shader_parameters.png "Shader parameters as seen in GUI")
