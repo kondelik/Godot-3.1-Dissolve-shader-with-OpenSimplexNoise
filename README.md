@@ -3,6 +3,8 @@
 
 Simple tutorial-like Dissolve Shader and Material for GODOT 3.1 alpha 2
 
+![in_action](in_action.gif "in action")
+
 The Hearth of project is simple [Dissolve Shader](Materials/Dissolve.shader) with 4 uniforms:
 
 ```shader
