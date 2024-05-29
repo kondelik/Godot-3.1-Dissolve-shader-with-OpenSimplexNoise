@@ -1,3 +1,11 @@
+# NO LONGER MAINTAINED.
+
+Please look at [godotshaders.com](https://godotshaders.com)
+
+For example: https://godotshaders.com/shader/fire-dissolve-shader/ and many others 🙂 See you there!
+
+
+
 # Godot 3.1 Dissolve shader with OpenSimplexNoise
 
 
